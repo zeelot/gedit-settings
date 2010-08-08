@@ -26,7 +26,7 @@ $0]]></text>
     <description>KO docblock param</description>
   </snippet>
   <snippet>
-    <text><![CDATA[echo Kohana::debug($0);]]></text>
+    <text><![CDATA[echo Kohana::debug($$0);${1:die;}]]></text>
     <tag>kd</tag>
     <description>KO debug</description>
   </snippet>
@@ -117,5 +117,20 @@ return cname;
 }]]></text>
     <tag>kc</tag>
     <description>KO Controller</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[try
+{
+	$0
+
+	Notices::add('success', __('${2:message}'));
+}
+catch (ORM_Validation_Exception $e)
+{
+	Notices::add('error', __('${1:message}'));
+	$errors = $e->errors();
+}]]></text>
+    <tag>kotc</tag>
+    <description>KO ORM try/catch</description>
   </snippet>
 </snippets>
