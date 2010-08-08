@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets>
+  <snippet>
+    <text><![CDATA[# ${1:Module Name}
+
+*${2:Short Description}*
+
+- **Module Version:** ${3:Version}
+- **Module URL:** <${4:Module URL}>
+- **Compatible Kohana Version(s):** ${5:3.0, 3.1}
+
+## Description
+${6:Full Description}
+
+## Requirements & Installation
+$0]]></text>
+    <tag>kmodreadme</tag>
+    <description>kmod-readme</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[{{#${1:Name}}}$0{{/${1:Name}}}]]></text>
+    <tag>kss</tag>
+    <description>stache-section</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[{{#labels}}{{${1:name}}}{{/labels}}$0]]></text>
+    <tag>kslabel</tag>
+    <description>stache-label</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[{{#ui}}{{${1:name}}}{{/ui}}$0]]></text>
+    <tag>ksui</tag>
+    <description>stache-ui</description>
+  </snippet>
+</snippets>

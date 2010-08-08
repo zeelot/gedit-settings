@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="php">
+  <snippet>
+    <text><![CDATA[<?php defined('SYSPATH') or die('No direct script access.');]]></text>
+    <tag>kdef</tag>
+    <description>kdef</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[$config['${1:key}'] = '${2:value}';
+$0]]></text>
+    <tag>kconf</tag>
+    <description>kconf</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[/**
+ * ${1:description}
+ *
+ * @return  ${2:void}
+ */]]></text>
+    <tag>kdoc</tag>
+    <description>kdoc</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[* @param   ${1:type}]]></text>
+    <tag>kdp</tag>
+    <description>kdp</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[echo Kohana::debug($0);]]></text>
+    <tag>kd</tag>
+    <description>kdebug</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[ORM::factory('$0');]]></text>
+    <tag>orm</tag>
+    <description>korm</description>
+  </snippet>
+</snippets>
