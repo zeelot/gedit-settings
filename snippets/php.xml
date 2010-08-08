@@ -3,13 +3,13 @@
   <snippet>
     <text><![CDATA[<?php defined('SYSPATH') or die('No direct script access.');]]></text>
     <tag>kdef</tag>
-    <description>kdef</description>
+    <description>KO security check</description>
   </snippet>
   <snippet>
     <text><![CDATA[$config['${1:key}'] = '${2:value}';
 $0]]></text>
     <tag>kconf</tag>
-    <description>kconf</description>
+    <description>KO Config</description>
   </snippet>
   <snippet>
     <text><![CDATA[/**
@@ -18,21 +18,104 @@ $0]]></text>
  * @return  ${2:void}
  */]]></text>
     <tag>kdoc</tag>
-    <description>kdoc</description>
+    <description>KO Docblock</description>
   </snippet>
   <snippet>
     <text><![CDATA[* @param   ${1:type}]]></text>
     <tag>kdp</tag>
-    <description>kdp</description>
+    <description>KO docblock param</description>
   </snippet>
   <snippet>
     <text><![CDATA[echo Kohana::debug($0);]]></text>
     <tag>kd</tag>
-    <description>kdebug</description>
+    <description>KO debug</description>
   </snippet>
   <snippet>
     <text><![CDATA[ORM::factory('$0');]]></text>
     <tag>orm</tag>
-    <description>korm</description>
+    <description>KO ORM</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<?php defined('SYSPATH') or die('No direct script access.');
+
+class $<
+parts = $GEDIT_CURRENT_DOCUMENT_URI.split('/');
+
+cname = 'View';
+found_view = False;
+
+for part in parts:
+	if found_view == True:
+		cname += '_'+part.replace('.php', '').title();
+	if part == 'view':
+		found_view = True;
+return cname;
+> extends ${1:Kostache}
+{
+	public $user;
+	public $uri;
+
+	public function _initialize()
+	{
+		parent::_initialize();
+	}
+
+	$0
+}]]></text>
+    <tag>kv</tag>
+    <description>KO View Class</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<?php defined('SYSPATH') or die('No direct script access.');
+
+class $<
+parts = $GEDIT_CURRENT_DOCUMENT_URI.split('/');
+
+cname = 'Model';
+found_view = False;
+
+for part in parts:
+	if found_view == True:
+		cname += '_'+part.replace('.php', '').title();
+	if part == 'model':
+		found_view = True;
+return cname;
+> extends ${1:ORM}
+{
+	public function rules()
+	{
+		return array
+		(
+			$0
+		);
+	}
+}]]></text>
+    <tag>km</tag>
+    <description>KO Model</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<?php defined('SYSPATH') or die('No direct script access.');
+
+class $<
+parts = $GEDIT_CURRENT_DOCUMENT_URI.split('/');
+
+cname = 'Controller';
+found_view = False;
+
+for part in parts:
+	if found_view == True:
+		cname += '_'+part.replace('.php', '').title();
+	if part == 'controller':
+		found_view = True;
+return cname;
+> extends ${1:Controller}
+{
+	public function action_index()
+	{
+		$0
+	}
+}]]></text>
+    <tag>kc</tag>
+    <description>KO Controller</description>
   </snippet>
 </snippets>
