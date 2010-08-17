@@ -122,15 +122,33 @@ return cname;
     <text><![CDATA[try
 {
 	$0
-
-	Notices::add('success', __('${2:message}'));
+	Notices::add('success', __('${1:message}'));
 }
 catch (ORM_Validation_Exception $e)
 {
-	Notices::add('error', __('${1:message}'));
+	Notices::add('error', __('${2:There were some problems with the values you entered.}'));
 	$errors = $e->errors();
 }]]></text>
     <tag>kotc</tag>
     <description>KO ORM try/catch</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[public function ${1:form}()
+{
+	$yf = YForm::factory();
+
+	$${2:group} = $yf->group(${3:namespace});
+
+	return array
+	(
+		array('element' => $yf->open()),
+		array('element' => $${4:yf}->${5:type}('${6:label}')),
+		$0
+		array('element' => $yf->submit('${7:submit}')),
+		array('element' => $yf->close()),
+	);
+}]]></text>
+    <tag>ksyf</tag>
+    <description>KO YForm</description>
   </snippet>
 </snippets>

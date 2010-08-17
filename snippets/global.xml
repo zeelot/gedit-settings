@@ -32,4 +32,11 @@ $0]]></text>
     <tag>ksui</tag>
     <description>stache-ui</description>
   </snippet>
+  <snippet>
+    <text><![CDATA[{{#${1:form}}}
+	{{{${2:element}}}}
+{{/${1:form}}}]]></text>
+    <tag>ksform</tag>
+    <description>stache-form</description>
+  </snippet>
 </snippets>
